@@ -1,0 +1,172 @@
+@import "tailwindcss";
+@theme {
+  --color-*: initial;
+  --text-*: initial;
+  --shadow-*: initial;
+  --drop-shadow-*: initial;
+  --blur-*: initial;
+
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-primary: #2b6cb0;
+  --color-secondary: #e4e4e7;
+  --color-warning: #f5a524;
+  --color-error: #c53030;
+  --color-success: #38a169;
+  --color-disabled: #111111;
+
+  --color-full-page: #f2f5f9;
+  --color-orange-pingtung: #ac5231;
+
+  --color-blue-50: #e8f8ff;
+  --color-blue-100: #bee3f8;
+  --color-blue-200: #90cdf4;
+  --color-blue-300: #63b3ed;
+  --color-blue-400: #4299e1;
+  --color-blue-500: #3182ce;
+  --color-blue-600: #2b6cb0;
+  --color-blue-700: #2c5282;
+  --color-blue-800: #2a4365;
+  --color-blue-900: #1a365d;
+
+  --color-green-50: #f0fff4;
+  --color-green-100: #c6f6d5;
+  --color-green-200: #9ae6b4;
+  --color-green-300: #68d391;
+  --color-green-400: #48bb78;
+  --color-green-500: #38a169;
+  --color-green-600: #25855a;
+  --color-green-700: #276749;
+  --color-green-800: #22543d;
+  --color-green-900: #1c4532;
+
+  --color-gray-50: #fafafa;
+  --color-gray-100: #f4f4f5;
+  --color-gray-200: #e4e4e7;
+  --color-gray-300: #d4d4d8;
+  --color-gray-400: #a1a1aa;
+  --color-gray-500: #71717a;
+  --color-gray-600: #52525b;
+  --color-gray-700: #3f3f46;
+  --color-gray-800: #27272a;
+  --color-gray-900: #18181b;
+
+  --color-red-50: #fff5f5;
+  --color-red-100: #fed7d7;
+  --color-red-200: #feb2b2;
+  --color-red-300: #fc8181;
+  --color-red-400: #f56565;
+  --color-red-500: #e53e3e;
+  --color-red-600: #c53030;
+  --color-red-700: #9b2c2c;
+  --color-red-800: #822727;
+  --color-red-900: #63171b;
+
+  --color-pink: #ff448f;
+
+  --color-purple-50: #faf5ff;
+  --color-purple-100: #e9d8fd;
+  --color-purple-200: #d6bcfa;
+  --color-purple-300: #b794f4;
+  --color-purple-400: #9f7aea;
+  --color-purple-500: #805ad5;
+  --color-purple-600: #6b46c1;
+  --color-purple-700: #553c9a;
+  --color-purple-800: #44337a;
+  --color-purple-900: #322659;
+
+  --color-yellow-50: #fefce8;
+  --color-yellow-100: #fdedd3;
+  --color-yellow-200: #fbdba7;
+  --color-yellow-300: #f9c97c;
+  --color-yellow-400: #f7b750;
+  --color-yellow-500: #f5a524;
+  --color-yellow-600: #c4841d;
+  --color-yellow-700: #936316;
+  --color-yellow-800: #62420e;
+  --color-yellow-900: #312107;
+
+  --color-table-header: #b8c7df;
+  --color-table-even: #f2f6fc;
+
+  --color-effect-shadow-1: rgba(0, 0, 0, 0.12);
+  --color-effect-shadow-2: rgba(0, 0, 0, 0.14);
+  --color-effect-shadow-3: rgba(0, 0, 0, 0.2);
+  --color-effect-shadow-4: rgba(0, 0, 0, 0.25);
+
+  --shadow-base:
+    0px 1px 5px 0px var(--color-effect-shadow-1),
+    0px 2px 2px 0px var(--color-effect-shadow-2),
+    0px 3px 1px -2px var(--color-effect-shadow-3);
+  --drop-shadow-base:
+    0px 1px 5px 0px var(--color-effect-shadow-1),
+    0px 2px 2px 0px var(--color-effect-shadow-2),
+    0px 3px 1px -2px var(--color-effect-shadow-3);
+
+  --shadow-menu:
+    0px 3px 14px 2px var(--color-effect-shadow-1),
+    0px 8px 10px 1px var(--color-effect-shadow-2),
+    0px 5px 5px -3px var(--color-effect-shadow-3);
+  --drop-shadow-menu:
+    0px 3px 14px 2px var(--color-effect-shadow-1),
+    0px 8px 10px 1px var(--color-effect-shadow-2),
+    0px 5px 5px -3px var(--color-effect-shadow-3);
+
+  --shadow-popup: 0px 11px 15px 0px var(--color-effect-shadow-4);
+  --drop-shadow-popup: 0px 11px 15px 0px var(--color-effect-shadow-4);
+
+  --shadow-card-actions: 0px -1p 10px 0px var(--color-effect-shadow-4);
+  --drop-shadow-card-actions: 0px -1p 10px 0px var(--color-effect-shadow-4);
+
+  --blur-card-actions: 10px;
+
+  --text-h1: 3.75rem;
+  --text-h1--line-height: 1.2;
+  --text-h1--letterSpacing: -0.09375rem;
+  --text-h1--font-weight: 700;
+
+  --text-h2: 3rem;
+  --text-h2--line-height: 1.25;
+  --text-h2--letterSpacing: -0.09375rem;
+  --text-h2--font-weight: 700;
+
+  --text-h3: 2.5rem;
+  --text-h3--line-height: 1.25;
+  --text-h3--letterSpacing: -0.03125rem;
+  --text-h3--font-weight: 700;
+
+  --text-h4: 2rem;
+  --text-h4--line-height: 1.25;
+  --text-h4--letterSpacing: -0.03125rem;
+  --text-h4--font-weight: 700;
+
+  --text-h5: 1.5rem;
+  --text-h5--line-height: 1.25;
+  --text-h5--letterSpacing: -0.03125rem;
+  --text-h5--font-weight: 700;
+
+  --text-subtitle1: 1.25rem;
+  --text-subtitle1--line-height: 1.4;
+  --text-subtitle1--letterSpacing: 0;
+  --text-subtitle1--font-weight: 700;
+
+  --text-subtitle2: 1.25rem;
+  --text-subtitle2--line-height: 1.556;
+  --text-subtitle2--letterSpacing: 0;
+  --text-subtitle2--font-weight: 700;
+
+  --text-tiny: 0.75rem;
+  --text-tiny--line-height: 1;
+
+  --text-sm: 0.875rem;
+  --text-sm--line-height: 1.23;
+
+  --text-md: 1rem;
+  --text-md--line-height: 1.5;
+
+  --text-lg: 1.125rem;
+  --text-lg--line-height: 1.5;
+
+  --text-xl: 1.25rem;
+  --text-xl--line-height: 1.5;
+}

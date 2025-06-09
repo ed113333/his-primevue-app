@@ -1,0 +1,50 @@
+@import "tailwindcss";
+@import "tailwindcss-primeui"; 
+
+
+#app{
+
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  color-scheme: light dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  color-scheme: light dark;
+  background-color: #242424;
+}
+
+
+/* remove outline */
+.ProseMirror:focus {
+  outline: none;
+}
+/* set */
+.ProseMirror {        
+  min-height: 200px;
+  max-height: 100px;
+  overflow: scroll;
+}
+
+
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+
+  del {
+    text-decoration: line-through;
+    color: red;
+  }
+  ::v-deep span[data-insertion] {
+    color: green;
+    background-color: #eaffea;
+  }
+}
+
