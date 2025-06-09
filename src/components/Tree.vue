@@ -47,7 +47,7 @@ export interface TreeType {
 }
 
 // ---------- Props & Emits ---------- //
-const props = defineProps<{
+const _props = defineProps<{
   trees: TreeType[]
   expandedKeys: Record<string, boolean> // <--- 加上這行
   variant?: string
