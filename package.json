@@ -1,12 +1,14 @@
 {
   "name": "his-primevue-app",
+  "homepage": "https://github.com/ed113333/his-primevue-app",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist"  
   },
   "dependencies": {
     "@primeuix/themes": "^1.1.1",
@@ -26,6 +28,7 @@
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.2.3",
     "@vue/tsconfig": "^0.7.0",
+    "gh-pages": "^6.3.0",
     "typescript": "~5.8.3",
     "vite": "^6.3.5",
     "vue-tsc": "^2.2.8"

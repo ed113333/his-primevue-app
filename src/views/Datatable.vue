@@ -16,15 +16,8 @@
             showGridlines 
             paginator 
             :rows="10"
-              :pt="{
-                  column: {
-                      bodycell: ({ state }) => ({
-                          class: [{ '!py-0': state['d_editing'] }]
-                      })
-                  }
-              }"
           >
-              <Column v-for="col of columns" :key="col.field" :field="col.field" :header="col.header"   style="max-width: 200px;" class="truncate" size="small">
+              <Column v-for="col of columns" :key="col.field" :field="col.field" :header="col.header" class="truncate" size="small">
                 <template #body="{ data, field }">
                   <span v-if="field === 'status' && !data[field]">未報到</span>
                   <span v-else-if="field === 'check' && data[field] === '0'">
