@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>Vue Widget Demo</title>
+  <link rel="stylesheet" href="https://unpkg.com/primeicons@6.0.1/primeicons.css" />
+  <link rel="stylesheet" href="https://unpkg.com/primevue/resources/themes/saga-blue/theme.css" />
+  <link rel="stylesheet" href="https://unpkg.com/primevue/resources/primevue.min.css" />
+
+  <!-- UMD JS -->
+  <script src="https://ed113333.github.io/his-primevue-app/my-vue-app.umd.js" defer></script>
+</head>
+<body>
+  <h1>Vue Widget Demo</h1>
+  <div id="app"></div>
+
+  <script>
+    window.addEventListener('load', function() {
+      if (window.MyVueApp && typeof window.MyVueApp.createMyApp === 'function') {
+        window.MyVueApp.createMyApp('#app');
+      } else {
+        console.error('MyVueApp 未正確載入');
+      }
+    });
+  </script>
+</body>
+</html>
