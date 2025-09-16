@@ -10,17 +10,18 @@
   <link href="https://unpkg.com/primevue/resources/themes/saga-blue/theme.css" rel="stylesheet">
   <link href="https://unpkg.com/primevue/resources/primevue.min.css" rel="stylesheet">
   <link href="https://unpkg.com/primeicons/primeicons.css" rel="stylesheet">
-  
-  <!-- 你的打包檔 -->
-  <script src="https://ed113333.github.io/his-primevue-app/my-vue-app.umd.js"></script>
+
 </head>
 <body>
   <h1>現有 HTML 頁面</h1>
 
   <div id="my-widget"></div>
 
-  <script>
-    // 使用全局物件掛載 Vue
+
+    
+  <!-- 你的打包檔 -->
+  <script src="https://ed113333.github.io/his-primevue-app/my-vue-app.umd.js" defer></script>
+  <script defer>
     MyVueApp.createMyApp('#my-widget')
   </script>
 </body>
