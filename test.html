@@ -3,23 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <title>Vue Widget Demo</title>
+  <!-- Vue 3 UMD -->
+  <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
 
-  <!-- UMD JS -->
-  <script src="https://ed113333.github.io/his-primevue-app/my-vue-app.umd.js" defer></script>
+  <!-- PrimeVue UMD (建議找官方 CDN) -->
+  <link href="https://unpkg.com/primevue/resources/themes/saga-blue/theme.css" rel="stylesheet">
+  <link href="https://unpkg.com/primevue/resources/primevue.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/primeicons/primeicons.css" rel="stylesheet">
+  
+  <!-- 你的打包檔 -->
+  <script src="./my-vue-app.umd.js"></script>
 </head>
 <body>
-  <h1>Vue Widget Demo</h1>
-  <div id="app"></div>
+  <h1>現有 HTML 頁面</h1>
+
+  <div id="my-widget"></div>
 
   <script>
-    window.addEventListener('load', function() {
-      if (window.MyVueApp && typeof window.MyVueApp.createMyApp === 'function') {
-        window.MyVueApp.createMyApp('#app');
-      } else {
-        console.error('MyVueApp 未正確載入');
-      }
-    });
+    // 使用全局物件掛載 Vue
+    MyVueApp.createMyApp('#my-widget')
   </script>
 </body>
 </html>
-
