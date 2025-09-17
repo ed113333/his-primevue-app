@@ -5,11 +5,17 @@
   <title>Vue Widget Demo</title>
   <!-- Vue 3 UMD -->
   <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+  console.log("vue.global.prod.js loaded");
 
   <!-- PrimeVue UMD (建議找官方 CDN) -->
   <link href="https://unpkg.com/primevue/resources/themes/saga-blue/theme.css" rel="stylesheet">
+  console.log("theme.css loaded");
+
   <link href="https://unpkg.com/primevue/resources/primevue.min.css" rel="stylesheet">
+  console.log("primevue.min.css loaded");
+
   <link href="https://unpkg.com/primeicons/primeicons.css" rel="stylesheet">
+console.log("primeicons.css loaded");
 
 </head>
 <body>
@@ -21,8 +27,13 @@
     
   <!-- 你的打包檔 -->
   <script src="https://ed113333.github.io/his-primevue-app/my-vue-app.umd.js" defer></script>
+  console.log("my-vue-app.umd.js loaded");
+
   <script defer>
     MyVueApp.createMyApp('#my-widget')
+    console.log("MyVueApp loaded");
+
   </script>
 </body>
 </html>
+
