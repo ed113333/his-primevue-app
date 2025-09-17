@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Vue Widget Demo</title>
   <!-- Vue 3 UMD -->
-  <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js" defer></script>
   <script>console.log("vue.global.prod.js loaded");</script>
 
   <!-- PrimeVue UMD (建議找官方 CDN) -->
@@ -30,11 +30,14 @@
   <script>console.log("my-vue-app.umd.js loaded");</script>
 
   <script defer>
-    MyVueApp.createMyApp('#my-widget')
-    console.log("MyVueApp loaded");
+   document.addEventListener("DOMContentLoaded", () => {
+      console.log("all scripts ready");
+      MyVueApp.createMyApp('#my-widget');
+    });
 
   </script>
 </body>
 </html>
+
 
 
